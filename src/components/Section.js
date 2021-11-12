@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Zoom } from "react-awesome-reveal";
+import Fade from "react-reveal/Fade";
 
 function Section({
   title,
@@ -11,19 +11,19 @@ function Section({
 }) {
   return (
     <Wrap bgImage={backgroundImg}>
-      <Zoom>
+      <Fade bottom>
         <ItemText>
           <h1>{title}</h1>
           <p>{description}</p>
         </ItemText>
-      </Zoom>
+      </Fade>
       <Buttons>
-        <Zoom>
+        <Fade bottom>
           <ButtonGroup>
             <LeftButton>{leftBtnText}</LeftButton>
             {rightBtnText && <RightButton>{rightBtnText}</RightButton>}
           </ButtonGroup>
-        </Zoom>
+        </Fade>
         <DownArrow src="/images/down-arrow.svg" />
       </Buttons>
     </Wrap>
